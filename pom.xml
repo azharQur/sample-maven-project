@@ -26,18 +26,18 @@
     <distributionManagement>
         <snapshotRepository>
             <id>artifact-registry</id>
-            <url>artifactregistry://us-east4-maven.pkg.dev/prj-s-azhar-qureshi-e57fjava-repository</url>
+            <url>artifactregistry://us-east4-maven.pkg.dev/prj-s-azhar-qureshi-e57f/sample-app-repository</url>
         </snapshotRepository>
         <repository>
             <id>artifact-registry</id>
-            <url>artifactregistry://us-east4-maven.pkg.dev/prj-s-azhar-qureshi-e57f/java-repository</url>
+            <url>artifactregistry://us-east4-maven.pkg.dev/prj-s-azhar-qureshi-e57f/sample-app-repository</url>
         </repository>
     </distributionManagement>
 
     <repositories>
         <repository>
             <id>artifact-registry</id>
-            <url>artifactregistry://us-east4-maven.pkg.dev/prj-s-azhar-qureshi-e57f/java-repository</url>
+            <url>artifactregistry://us-east4-maven.pkg.dev/prj-s-azhar-qureshi-e57f/sample-app-repository</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
