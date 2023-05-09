@@ -1,0 +1,115 @@
+import "strings"
+
+providers = {
+	"google": {
+		"alias":               "",
+		"config":              {},
+		"full_name":           "registry.terraform.io/hashicorp/google",
+		"module_address":      "",
+		"name":                "google",
+		"provider_config_key": "google",
+		"version_constraint":  "",
+	},
+}
+
+resources = {
+	"google_compute_instance.default": {
+		"address": "google_compute_instance.default",
+		"config": {
+			"boot_disk": [
+				{
+					"initialize_params": [
+						{
+							"image": {
+								"constant_value": "debian-cloud/debian-11",
+							},
+							"labels": {
+								"constant_value": {
+									"my_label": "value",
+								},
+							},
+						},
+					],
+				},
+			],
+			"machine_type": {
+				"constant_value": "e2-micro",
+			},
+			"metadata": {
+				"constant_value": {
+					"foo": "bar",
+				},
+			},
+			"name": {
+				"constant_value": "test",
+			},
+			"network_interface": [
+				{
+					"access_config": [
+						{},
+					],
+					"network": {
+						"constant_value": "default",
+					},
+				},
+			],
+			"project": {
+				"constant_value": "prj-c-tfe-ba9a",
+			},
+			"scratch_disk": [
+				{
+					"interface": {
+						"constant_value": "SCSI",
+					},
+				},
+			],
+			"service_account": [
+				{
+					"email": {
+						"constant_value": "project-service-account@prj-c-tfe-ba9a.iam.gserviceaccount.com",
+					},
+					"scopes": {
+						"constant_value": [
+							"cloud-platform",
+						],
+					},
+				},
+			],
+			"tags": {
+				"constant_value": [
+					"foo",
+					"bar",
+				],
+			},
+			"zone": {
+				"constant_value": "northamerica-northeast2-a",
+			},
+		},
+		"count":               {},
+		"depends_on":          [],
+		"for_each":            {},
+		"mode":                "managed",
+		"module_address":      "",
+		"name":                "default",
+		"provider_config_key": "google",
+		"provisioners":        [],
+		"type":                "google_compute_instance",
+	},
+}
+
+provisioners = {}
+
+variables = {}
+
+outputs = {}
+
+module_calls = {}
+
+strip_index = func(addr) {
+	s = strings.split(addr, ".")
+	for s as i, v {
+		s[i] = strings.split(v, "[")[0]
+	}
+
+	return strings.join(s, ".")
+}
