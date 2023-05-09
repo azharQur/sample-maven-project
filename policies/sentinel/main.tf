@@ -9,6 +9,10 @@ terraform {
       version = "~> 0.44.0"
     }
   }
+  backend "gcs" {
+    bucket = "STATE_BUCKET_NAME"
+    prefix = "terraform/projects/state"
+  }
 }
 
 provider "tfe" {
